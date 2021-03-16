@@ -1,0 +1,41 @@
+.card {
+  height: 100%;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.car-info {
+  width: 100%;
+}
+
+.contact-info {
+  width: 100%;
+}
+
+.carousel {
+  height: 100%;
+}
+
+.carousel-button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+}
+
+.carousel-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3%;
+}
+
+.upper-row {
+  /* max-height: 800px; */
+  margin-bottom: 1rem;
+}
+.icon {
+  font-size: 2rem;
+}
