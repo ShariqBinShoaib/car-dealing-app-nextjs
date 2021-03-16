@@ -13,9 +13,16 @@ function NavBar() {
       </div>
       <div className="col-xs-10">
         <div className="row">
-          <div className="links col">Home</div>
-          <div className="links col">About</div>
-          <div className="links col">Contact</div>
+          <div className="links col">
+            <Link href="/login">
+              <a>Login</a>
+            </Link>
+          </div>
+          <div className="links col">
+            <Link href="/signup">
+              <a>Sign Up</a>
+            </Link>
+          </div>
         </div>
       </div>
     </div>

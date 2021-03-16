@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { Form, Input, Button } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 
@@ -8,7 +9,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="login-form-wrapper">
+    <div className="wrapper">
       <div className="login-form-container">
         <div className="login-form-header">
           <UserOutlined style={{ fontSize: "50px" }} />
@@ -26,7 +27,7 @@ const LoginForm = () => {
             rules={[
               {
                 required: true,
-                message: "Please input your Email Address!",
+                message: "Please enter your Email Address!",
               },
               {
                 pattern: /^\S+@\S+\.\S+$/i,
@@ -62,7 +63,7 @@ const LoginForm = () => {
               htmlType="submit"
               className="login-form-button"
             >
-              Log in
+              Sign in
             </Button>
             <div className="login-form-section">
               <a href="/reset-password">Forgot password?</a>
@@ -71,7 +72,9 @@ const LoginForm = () => {
         </Form>
         <div className="login-form-footer">
           Don't have an account?
-          <a href="/register">Sign Up</a>
+          <Link href="/signup">
+            <a>Sign Up</a>
+          </Link>
         </div>
       </div>
     </div>

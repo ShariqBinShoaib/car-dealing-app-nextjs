@@ -1,13 +1,3 @@
-.login-form-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  @include media-breakpoint-down(xs, $grid-breakpoints) {
-    background-color: #e7e7f1;
-  }
-}
-
 .login-form-header {
   text-align: center;
 }

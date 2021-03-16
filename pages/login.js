@@ -1,10 +1,13 @@
 import React from "react";
+import AppLayout from "../components/AppLayout";
 import LoginForm from "../components/LoginForm";
 
 function Login() {
   return (
     <div>
-      <LoginForm />
+      <AppLayout title="| Login">
+        <LoginForm />
+      </AppLayout>
     </div>
   );
 }

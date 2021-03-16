@@ -15,12 +15,12 @@ export default function AppLayout({ title, children }) {
       <main>
         <Layout className="layout">
           <Header className="mb-3">
-            <div className="container">
+            <div className="container-fluid">
               <NavBar />
             </div>
           </Header>
           <Content>
-            <div className="container">{children}</div>
+            <div className="container-fluid">{children}</div>
           </Content>
           <Footer style={{ textAlign: "center" }}>
             Ant Design{" "}
