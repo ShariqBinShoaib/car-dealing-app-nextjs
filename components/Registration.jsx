@@ -1,39 +1,6 @@
 import React from "react";
-import { Form, Input, Tooltip, Select, Button } from "antd";
-import { QuestionCircleOutlined } from "@ant-design/icons";
-
-const { Option } = Select;
-
-const formItemLayout = {
-  labelCol: {
-    xs: {
-      span: 24,
-    },
-    sm: {
-      span: 8,
-    },
-  },
-  wrapperCol: {
-    xs: {
-      span: 24,
-    },
-    sm: {
-      span: 12,
-    },
-  },
-};
-const tailFormItemLayout = {
-  wrapperCol: {
-    xs: {
-      span: 24,
-      offset: 0,
-    },
-    sm: {
-      span: 16,
-      offset: 8,
-    },
-  },
-};
+import { Form, Input, Tooltip, Button } from "antd";
+import { QuestionCircleOutlined, UserAddOutlined } from "@ant-design/icons";
 
 const RegistrationForm = () => {
   const [form] = Form.useForm();
@@ -45,8 +12,11 @@ const RegistrationForm = () => {
   return (
     <div className="wrapper">
       <div className="registration-form-container">
+        <div className="registration-form-header">
+          <UserAddOutlined style={{ fontSize: "50px" }} />
+          <h2>Sign Up</h2>
+        </div>
         <Form
-          // {...formItemLayout}
           form={form}
           name="register"
           size="large"
@@ -63,7 +33,7 @@ const RegistrationForm = () => {
                 rules={[
                   {
                     required: true,
-                    message: "Please enter your First Name!",
+                    message: "First Name is required!",
                   },
                 ]}
               >
@@ -78,7 +48,7 @@ const RegistrationForm = () => {
                 rules={[
                   {
                     required: true,
-                    message: "Please enter your Last Name!",
+                    message: "Last Name is required!",
                   },
                 ]}
               >
@@ -104,7 +74,7 @@ const RegistrationForm = () => {
               },
               {
                 required: true,
-                message: "Please enter your Email Address",
+                message: "Email Address  is required",
               },
             ]}
           >
@@ -124,7 +94,7 @@ const RegistrationForm = () => {
             rules={[
               {
                 required: true,
-                message: "Please enter your phone number!",
+                message: "phone number is required!",
               },
             ]}
           >
@@ -138,7 +108,7 @@ const RegistrationForm = () => {
             rules={[
               {
                 required: true,
-                message: "Please enter your password!",
+                message: "password is required!",
               },
             ]}
             hasFeedback
@@ -155,7 +125,7 @@ const RegistrationForm = () => {
             rules={[
               {
                 required: true,
-                message: "Please confirm your password!",
+                message: "Required!",
               },
               ({ getFieldValue }) => ({
                 validator(rule, value) {
@@ -169,7 +139,7 @@ const RegistrationForm = () => {
               }),
             ]}
           >
-            <Input.Password placeholder="Enter password again to confirm" />
+            <Input.Password placeholder="Re-Enter password to confirm" />
           </Form.Item>
           <div className="mx-auto w-100">
             <Form.Item>

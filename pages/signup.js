@@ -5,7 +5,7 @@ import RegistrationForm from "../components/Registration";
 function Signup() {
   return (
     <div>
-      <AppLayout>
+      <AppLayout title="| Sign Up">
         <RegistrationForm />
       </AppLayout>
     </div>
