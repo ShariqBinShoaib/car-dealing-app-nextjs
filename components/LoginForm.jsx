@@ -8,14 +8,14 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="wrapper">
+    <div className="login-form-wrapper">
       <div className="login-form-container">
         <div className="login-form-header">
           <UserOutlined style={{ fontSize: "50px" }} />
           <h2>Sign In</h2>
         </div>
         <Form
-          name="normal_login"
+          name="login"
           initialValues={{
             remember: true,
           }}
@@ -28,11 +28,15 @@ const LoginForm = () => {
                 required: true,
                 message: "Please input your Email Address!",
               },
+              {
+                pattern: /^\S+@\S+\.\S+$/i,
+                message: "Please enter valid email address!",
+              },
             ]}
           >
             <Input
               prefix={<UserOutlined />}
-              placeholder="Username"
+              placeholder="Email Address"
               size="large"
             />
           </Form.Item>

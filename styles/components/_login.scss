@@ -1,8 +1,11 @@
-.wrapper {
+.login-form-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  @include media-breakpoint-down(xs, $grid-breakpoints) {
+    background-color: #e7e7f1;
+  }
 }
 
 .login-form-header {
@@ -15,6 +18,11 @@
   flex-grow: 1;
   background-color: #e7e7f1;
   box-shadow: 0 1px 10px #0000004d, 0 0 20px #0000001a;
+
+  @include media-breakpoint-down(xs, $grid-breakpoints) {
+    max-width: 100%;
+    box-shadow: none;
+  }
 }
 
 .login-form-rememberme {
