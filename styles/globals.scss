@@ -1,4 +1,24 @@
+
+// Ant Design CSS
 @import "~antd/dist/antd.css";
+
+// Bootstrap Grid System
+@import "bootstrap-grid";
+
+// Common styles
+@import "common";
+
+// Components
+@import "components/home";
+@import "components/item";
+@import "components/navbar";
+@import "components/vehicle";
+@import "components/login";
+@import "components/registration";
+
+* {
+  box-sizing: border-box;
+}
 
 html,
 body {
@@ -13,10 +33,6 @@ a {
   text-decoration: none;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 img {
   height: 100%;
   max-width: 100%;
@@ -24,10 +40,3 @@ img {
   margin: 0 auto;
   object-fit: contain;
 }
-
-@import "bootstrap-grid";
-@import "components/home";
-@import "components/item";
-@import "components/navbar";
-@import "components/vehicle";
-@import "components/login";
